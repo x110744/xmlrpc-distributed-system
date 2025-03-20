@@ -14,7 +14,7 @@ def new_note(server):
 	timestamp = datetime.utcnow().strftime("%d/%m/%Y - %H:%M:%S")
 	try:
 		server.save(topic_name, note_name, note_text, timestamp)
-	except Fault as f:
+	except:
 		# print(f)
 		print("Server error, data not saved.")
 
